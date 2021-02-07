@@ -78,7 +78,7 @@ li {
 .non-active {
     background-color: rgb(179, 179, 179);
     color: rgb(221, 221, 221);
-    cursor: wait;
+    cursor: not-allowed;
 }
 
 .dwn {
@@ -129,6 +129,12 @@ li {
     align-items: center;
     color: rgb(230, 230, 230);
 }
+
+#upload-file {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
 
 @media (max-width: 1200px) {
 

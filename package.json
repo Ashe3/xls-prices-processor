@@ -6,13 +6,34 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": ""
+    "build": "webpack"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.12.13",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "lowdb": "^1.0.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "nodemonConfig": {
+    "ext": "js",
+    "ignore": [
+      "*.test.ts",
+      "db/*"
+    ],
+    "delay": "2"
   }
 }

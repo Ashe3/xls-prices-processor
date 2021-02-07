@@ -13,24 +13,6 @@
     <div id="root">
         <h3>Upload xls</h3>
         <ul id="set-ups">
-            <li id="1">
-                <span class="name">namenamena</span>
-                <span class="key">U</span>
-                <div class=btn>load</div>
-                <div class="btn">settings</div>
-                <div class="btn non-active">send</div>
-                <div class="btn dwn">download</div>  
-                <div class="btn delete">delete</div>
-            </li>
-            <li id="2">
-                <span class="name">namenamena</span>
-                <span class="key">D</span>
-                <div class=btn>load</div>
-                <div class="btn">settings</div>
-                <div class="btn">send</div>
-                <div class="btn non-active">download</div>  
-                <div class="btn delete">delete</div>
-            </li>
         </ul>
         <h3>Add xls settings below</h3>
         <div id="o-modal" class="btn su-btn">Add new</div>
@@ -43,8 +25,8 @@
                 <p>Name</p>
                 <input type="text" name="name">
                 <p>Share</p>
-                <input type="checkbox" id="email">Email</br>
-                <input type="checkbox" id="url" disabled>URL</br>
+                <input type="checkbox" name="email">Email</br>
+                <input type="checkbox" name="url" disabled>URL</br>
                 <p>Type</p>
                 <select name="type">
                     <option value="U" selected>U</option>
@@ -54,7 +36,8 @@
             </form>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/regenerator-runtime@0.13.1/runtime.js"></script>
+    <script src="app_bundle.js"></script>
 </body>
 
 </html>
