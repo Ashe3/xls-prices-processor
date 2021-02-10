@@ -1,11 +1,3 @@
 {
-  "rules": [
-    {
-      "name": "zxc",
-      "type": "U",
-      "email": "true",
-      "url": "false",
-      "id": "2QiswKKMV"
-    }
-  ]
+  "rules": []
 }
