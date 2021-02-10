@@ -12,13 +12,13 @@ export async function callApi(endpoint, method, body = {}, headers = {}) {
   }
 
   return fetch(url, options)
+    .then(response => response.json())
     .then(response => {
-      if (response.ok) {
-        return response.json();
+      if (response.result === 'ok') {
+        return response.body
       } else {
-        throw new Error('Something wrong')
+        throw new Error(response.message)
       }
     })
-    .then(response => response)
     .catch(e => alert(e.message));
 }

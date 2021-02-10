@@ -17,7 +17,7 @@ async function submitForm(formComponent) {
   const newRuleData = { name, type, email, url };
 
   const newRule = await callApi('/api/rules', 'POST', new URLSearchParams(newRuleData), { 'Content-Type': 'application/x-www-form-urlencoded' });
-  appendRule(newRule.rule);
+  appendRule(newRule);
   formComponent.reset();
 };
 

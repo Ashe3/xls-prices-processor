@@ -6,7 +6,7 @@ export const removeRule = async (id) => {
 }
 
 export const appendRule = (newRule) => {
-  const rulesList = document.getElementById('set-ups');
+  const rulesList = document.getElementById('rules-box');
   rulesList.append(createRuleElement(newRule));
 }
 
@@ -14,7 +14,6 @@ export const handleFileUpload = (event) => {
   const file = event.target.files[0];
   const { parentNode: node } = event.target;
   const formData = new FormData();
-  // node.getAttribute('id')
-  formData.append('file', file);
-  callApi(`/api/static/${node.getAttribute('id')}`, 'POST', formData);
+  formData.append(`file`, file);
+  callApi(`/api/static/${node.parentNode.getAttribute('id')}`, 'POST', formData);
 }

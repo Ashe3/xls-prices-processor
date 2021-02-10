@@ -12,6 +12,10 @@ class BaseRepository {
     return list.find(it => it.id === data.id);
   }
 
+  getOne(search) {
+    return this.dbContext.find(search).value();
+  }
+
   getAll() {
     return this.dbContext.value();
   }

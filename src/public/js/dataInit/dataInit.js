@@ -11,7 +11,7 @@ const uploadLocal = () => {
 }
 
 export const initData = async () => {
-  const rulesList = document.getElementById('set-ups');
+  const rulesList = document.getElementById('rules-box');
 
   const rules = await callApi('/api/rules', 'GET');
   const rulesElementList = rules.map(createRuleElement);
@@ -20,7 +20,7 @@ export const initData = async () => {
 };
 
 export const createRuleElement = ({ name, type, email, url, id }) => {
-  const element = createElement({ tagName: 'li', attrs: { id } });
+  const element = createElement({ tagName: 'div', className: 'rule', attrs: { id } });
 
   const ruleName = createElement({ tagName: 'span', className: 'name' });
   ruleName.innerText = name;
